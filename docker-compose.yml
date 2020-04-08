@@ -1,0 +1,42 @@
+version: '3.1'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  app:
+    hostname: $APP_DOMAIN
+    image: thisisdevelopment/php:7.4-fpm
+    user: ${USER_ID:-1000}:${GROUP_ID:-1000}
+    volumes:
+      - .:/var/www:rw
+      - ~/.composer:/home/www/.composer:rw
+      - ~/.cache:/home/www/.cache:rw
+      - ~/.npm:/home/www/.npm:rw
+    depends_on:
+      - redis
+      - db
+      - mail
+
+  db:
+    hostname: db.$APP_DOMAIN
+    image: mysql:8
+    volumes:
+      - ./docker/volumes/db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: $DB_DATABASE
+      MYSQL_ROOT_PASSWORD: $DB_PASSWORD
+
+  redis:
+    image: redis
+    hostname: redis.$APP_DOMAIN
+
+  mail:
+    hostname: mail.$APP_DOMAIN
+    image: mailhog/mailhog:latest
+    user: root
+    environment:
+      MH_API_BIND_ADDR: 0.0.0.0:80
+      MH_UI_BIND_ADDR: 0.0.0.0:80
+      MH_SMTP_BIND_ADDR: 0.0.0.0:25
