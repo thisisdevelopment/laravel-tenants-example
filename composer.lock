@@ -1067,16 +1067,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.5.1",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b2457b1ddb9c59396313eae4e948bdc5fa5251db"
+                "reference": "3a3b3f7fea69813f5a03449c6314bfb42c3ccf78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b2457b1ddb9c59396313eae4e948bdc5fa5251db",
-                "reference": "b2457b1ddb9c59396313eae4e948bdc5fa5251db",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3a3b3f7fea69813f5a03449c6314bfb42c3ccf78",
+                "reference": "3a3b3f7fea69813f5a03449c6314bfb42c3ccf78",
                 "shasum": ""
             },
             "require": {
@@ -1214,7 +1214,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-04-07T18:52:38+00:00"
+            "time": "2020-04-08T15:54:18+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3788,12 +3788,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tenancy/db-driver-mysql.git",
-                "reference": "800194a7d96c891333f45757b0c37102ce0f4e2e"
+                "reference": "e3c20bd55c84df59717412d6e1574cc03c235bd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tenancy/db-driver-mysql/zipball/800194a7d96c891333f45757b0c37102ce0f4e2e",
-                "reference": "800194a7d96c891333f45757b0c37102ce0f4e2e",
+                "url": "https://api.github.com/repos/tenancy/db-driver-mysql/zipball/e3c20bd55c84df59717412d6e1574cc03c235bd0",
+                "reference": "e3c20bd55c84df59717412d6e1574cc03c235bd0",
                 "shasum": ""
             },
             "require": {
@@ -3838,7 +3838,29 @@
                 "mysql",
                 "tenancy"
             ],
-            "time": "2020-02-16T16:18:33+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/ArlonAntonius",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/fletch3555",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/luceos",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/tenancy",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/tenancy",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-04-09T13:31:31+00:00"
         },
         {
             "name": "tenancy/framework",
@@ -4123,7 +4145,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/laravel-tenants",
-                "reference": "b8a9d1084f9b1cd47d505c0bf1a8530bdb71d0b9"
+                "reference": "7522a0f92538925626d1047ae08846be5ce72771"
             },
             "require": {
                 "tenancy/db-driver-mysql": "dev-master",
@@ -7557,5 +7579,6 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
