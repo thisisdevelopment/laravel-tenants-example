@@ -23,3 +23,5 @@ Vagrantfile
 common.env
 *~
 /.idea
+package-lock.json
+composer.lock
